@@ -31,5 +31,5 @@ Going forward to make sure the algorithm continues to learn, every 90 days take 
 1. SQL - extract our data (save as CSV)
 2. R - exploratory data analysis, file management, machine learning
 3. Amazon Machine Learning - machine learning
-4. C# or Java - build the prediction into the operational system
+4. C# or Java - build the prediction into the operational system (CRM)
 5. Python - potential file management
