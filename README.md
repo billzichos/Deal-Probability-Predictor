@@ -5,7 +5,7 @@ Predict the probability that a Deal is won given a set of factors.
 My goal is to be able to assign a probability of a Deal closing as won, no matter how far along it is in the negotiation process, given a set of known features (or attributes).
 
 ##Data
-The following data elements can be derived from internal systems, and are likely good predictors.
+The following data elements can be derived from internal systems, and are likely good predictors.  Live data cannot be made available to the public.
 
 1. Deal Number
 2. Asset Manager
