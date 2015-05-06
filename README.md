@@ -6,6 +6,7 @@ My goal is to be able to assign a probability of a Deal closing as won, no matte
 
 ##Data
 The following data elements can be derived from internal systems, and are likely good predictors.
+
 1. Deal Number
 2. Asset Manager
 2. Leasing Rep
