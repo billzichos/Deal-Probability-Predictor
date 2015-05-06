@@ -23,7 +23,7 @@ The following data elements can be derived from internal systems, and are likely
 ##Approach
 My plan is to capture the features listed above for the entire population (snapshot) of open deals.  180 days later, I will go back and mark them as won (1) or lost (0).  Those still in process will be removed from the list.  The end result is a dataset we can use to train an algorithm to be used for calculating deal probabilities of new/current deals.
 
-The statistical methods used for generating this model/algorithm is yet to be determined.  However, it should be a model that favors producing outputs between 0 and 1.  I may leverage Amazon Machine Learning for this step.
+The statistical methods used for generating this model/algorithm is yet to be determined.  However, it should be a method that favors producing outputs between 0 and 1.  I may leverage Amazon Machine Learning for this step.
 
 Going forward to make sure the algorithm continues to learn, every 90 days take a new shapshot using the same SQL query used to get the original snapshot.  After 180 days, repeat the process above - capture the outcome, strip out the incompletes and append to the existing training set.  That's right, the training dataset will continue to grow.  Run the same statistical methods against the updated training dataset.  The output is hopefully a continually more effective predictive algorithm and a more accurate forecast of sales (leasing).
 
