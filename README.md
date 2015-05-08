@@ -8,17 +8,17 @@ My goal is to be able to assign a probability of a Deal closing as won, no matte
 The following data elements can be derived from internal systems, and are likely good predictors.
 
 1. Deal Number
-2. Asset Manager
-2. Leasing Rep
-3. # of Days Since Creation
-4. Current Phase in the Sales (Leasing) Process
-5. # of Days in Current Phase
-6. Deal NER % Difference To Budget NER
-7. State
-8. Submarket
-9. Building Type (Product attribute)
-10. Customer
-11. Government Indicator (this may overlap too much with Customer)
+2. Asset Manager and/or Leasing Rep
+3. Building
+4. # of Days Since Creation
+5. Current Phase in the Sales (Leasing) Process
+6. # of Days in Current Phase
+7. Deal NER % Difference To Budget NER
+8. State
+9. Submarket
+10. Building Type (Product attribute)
+11. Customer
+12. Government Indicator (this may overlap too much with Customer)
 
 ##Approach
 My plan is to capture the features listed above for the entire population (snapshot) of open deals.  180 days later, I will go back and mark them as won (1) or lost (0).  Those still in process will be removed from the list.  The end result is a dataset we can use to train an algorithm to be used for calculating deal probabilities of new/current deals.
