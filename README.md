@@ -15,10 +15,11 @@ The following data elements can be derived from internal systems, and are likely
 6. # of Days in Current Phase
 7. Deal NER % Difference To Budget NER
 8. State
-9. Submarket
-10. Building Type (Product attribute)
-11. Customer
-12. Government Indicator (this may overlap too much with Customer)
+9. ZIP
+10. Submarket
+11. Building Type (Product attribute)
+12. Customer
+13. Government Indicator (this may overlap too much with Customer)
 
 ##Approach
 My plan is to capture the features listed above for the entire population (snapshot) of open deals.  180 days later, I will go back and mark them as won (1) or lost (0).  Those still in process will be removed from the list.  The end result is a dataset we can use to train an algorithm to be used for calculating deal probabilities of new/current deals.
