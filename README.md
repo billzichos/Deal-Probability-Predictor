@@ -10,7 +10,7 @@ The following data elements can be derived from internal systems, and are likely
 1. Deal Number
 2. Agreement
 3. Deal Type
-4. Asset Manager and/or Leasing Rep
+4. Primary Leasing Agent
 5. Building
 6. # of Days Since Creation
 7. Current Phase in the Sales (Leasing) Process
