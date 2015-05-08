@@ -1,5 +1,5 @@
 # Deal-Probability-Predictor
-Predict the probability that a Deal is won given a set of factors.
+Predict the probability that a Deal is won given a set of factors.  Progress is being maintained on the [wiki](https://github.com/billzichos/Deal-Probability-Predictor/wiki).
 
 ##Purpose
 My goal is to be able to assign a probability of a Deal closing as won, no matter how far along it is in the negotiation process, given a set of known features (or attributes).
