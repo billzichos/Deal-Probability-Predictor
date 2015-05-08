@@ -12,16 +12,17 @@ The following data elements can be derived from internal systems, and are likely
 3. Deal Type
 4. Primary Leasing Agent
 5. Building
-6. # of Days Since Creation
-7. Current Phase in the Sales (Leasing) Process
-8. # of Days in Current Phase
-9. Deal NER % Difference To Budget NER
-10. State
-11. ZIP
-12. Submarket
-13. Building Type (Product attribute)
-14. Customer
-15. Government Indicator (this may overlap too much with Customer)
+6. Deal Square Footage
+7. # of Days Since Creation
+8. Current Phase in the Sales (Leasing) Process
+9. # of Days in Current Phase
+10. Deal NER % Difference To Budget NER
+11. State
+12. ZIP
+13. Submarket
+14. Building Type (Product attribute)
+15. Customer
+16. Government Indicator (this may overlap too much with Customer)
 
 ##Approach
 My plan is to capture the features listed above for the entire population (snapshot) of open deals.  180 days later, I will go back and mark them as won (1) or lost (0).  Those still in process will be removed from the list.  The end result is a dataset we can use to train an algorithm to be used for calculating deal probabilities of new/current deals.
