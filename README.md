@@ -38,3 +38,4 @@ Going forward to make sure the algorithm continues to learn, every 90 days take 
 3. Amazon Machine Learning - machine learning
 4. C# or Java - build the prediction into the operational system (CRM)
 5. Python - potential file management
+6. Excel - a lot of times, its just easier...
