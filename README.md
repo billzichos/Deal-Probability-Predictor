@@ -2,7 +2,7 @@
 Predict the probability that a Deal is won given a set of factors.  Progress is being maintained on the [wiki](https://github.com/billzichos/Deal-Probability-Predictor/wiki).
 
 ##Purpose
-My goal is to be able to assign a probability of a Deal closing as won, no matter how far along it is in the negotiation process, given a set of known features (or attributes).
+My goal is to assign a probability of a Deal closing as won, no matter how far along it is in the negotiation process, given a set of known features (or attributes).
 
 ##Data
 The following data elements can be derived from internal systems, and are likely good predictors.
@@ -26,7 +26,7 @@ The following data elements can be derived from internal systems, and are likely
 17. Government Indicator (this may overlap too much with Customer)
 
 ##Approach
-My plan is to capture the features listed above for the entire population (snapshot) of open deals.  180 days later, I will go back and mark them as won (1) or lost (0).  Those still in process will be removed from the list.  The end result is a dataset we can use to train an algorithm to be used for calculating deal probabilities of new/current deals.
+My plan is to capture the features listed above with periodic snapshots of our open deals.  These periodic snapshots will be kept in separate files with each row representing a single deal.  As the deals in these snapshots are closed over time, I will mark as won (1) or lost (0) and add them to an accumulating file.  The end result is a dataset we can use to train a deal probability prediction model.
 
 The statistical methods used for generating this model/algorithm are yet to be determined.  However, it should be a method that favors producing outputs between 0 and 1.  I may leverage Amazon Machine Learning for this step.
 
@@ -39,3 +39,8 @@ Going forward to make sure the algorithm continues to learn, every 90 days take 
 4. C# or Java - build the prediction into the operational system (CRM)
 5. Python - potential file management
 6. Excel - a lot of times, its just easier...
+
+## Future Considerations
+1. Additional or a different mix of features.
+2. Predict how a deal will change during the negotiation lifecycle.
+3. Recommend a starting base rent amount.
