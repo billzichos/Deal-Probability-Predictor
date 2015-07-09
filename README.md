@@ -26,11 +26,14 @@ The following data elements can be derived from internal systems, and are likely
 17. Government Indicator (this may overlap too much with Customer)
 
 ##Approach
-My plan is to capture the features listed above with periodic snapshots of our open deals.  These periodic snapshots will be kept in separate files with each row representing a single deal.  As the deals in these snapshots are closed over time, I will mark as won (1) or lost (0) and add them to an accumulating file.  The end result is a dataset we can use to train a deal probability prediction model.
+My plan is to capture the features listed above with periodic snapshots of our open deals every 60 days.  These periodic snapshots will be kept in separate files with each row representing a single deal.  As the deals in these snapshots are closed over time, I will mark as won (1) or lost (0) and add them to an accumulating file.  The end result is a dataset we can use to train a deal probability prediction model.
 
 The statistical methods used for generating this model/algorithm are yet to be determined.  However, it should be a method that favors producing outputs between 0 and 1.  I may leverage Amazon Machine Learning for this step.
 
-Going forward to make sure the algorithm continues to learn, every 90 days take a new shapshot using the same SQL query used to get the original snapshot.  After 180 days, repeat the process above - capture the outcome, strip out the incompletes and append to the existing training set.  That's right, the training dataset will continue to grow.  Run the same statistical methods against the updated training dataset.  The output is hopefully a continually more effective predictive algorithm and a more accurate forecast of sales (leasing).
+To make sure the model continues to improve, the periodic snapshots and posting to the accumulating file will continue to happen.  Re-training the model against the growing dataset will effectively increase the its accuracy.
+
+## Testing
+
 
 ##Technologies
 1. SQL - extract our data (save as CSV)
@@ -44,3 +47,4 @@ Going forward to make sure the algorithm continues to learn, every 90 days take 
 1. Additional or a different mix of features.
 2. Predict how a deal will change during the negotiation lifecycle.
 3. Recommend a starting base rent amount.
+4. Different data collection frequencies.
