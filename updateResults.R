@@ -4,7 +4,7 @@ library(dplyr)
 # setwd("~/Private-Github-Files")
 
 # specify the snapshot file to update with actual results
-snapshotFilename <- "OpenDeals20150508.csv"
+snapshotFilename <- "OpenDeals20150601.csv"
 
 # import the actual results
 results <- read.csv("~//Private-Github-Files//results.csv")
