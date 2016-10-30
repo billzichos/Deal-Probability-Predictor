@@ -1,13 +1,17 @@
 #Update the periodic snapshot with Results if known
 library(dplyr)
 
-# setwd("~/Private-Github-Files")
+#setwd("~/Private-Github-Files")
 
 # specify the snapshot file to update with actual results
-snapshotFilename <- "OpenDeals20150804.csv"
+#snapshotFilename <- "OpenDeals20150508.csv"
+#snapshotFilename <- "OpenDeals20150601.csv"
+#snapshotFilename <- "OpenDeals20150804.csv"
+#snapshotFilename <- "OpenDeals20151001.csv"
+snapshotFilename <- "OpenDeals20151201.csv"
 
 # import the actual results
-results <- read.csv("~//Private-Github-Files//results.csv")
+results <- read.csv("~//Private-Github-Files//results.csv", header = FALSE, col.names = c("Deal.Number", "Status"), as.is = TRUE)
 # str(results)
 
 # import the point-in-time snapshot

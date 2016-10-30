@@ -2,10 +2,14 @@ privateDir <- "C:\\Users\\Bill\\Documents\\Private-Github-Files"
 
 setwd(privateDir)
 
-unprocessedSnap <- "OpenDeals20150601.csv"
+unprocessedSnap <- "OpenDeals20150508.csv"
+#unprocessedSnap <- "OpenDeals20150601.csv"
+#unprocessedSnap <- "OpenDeals20150804.csv"
+#unprocessedSnap <- "OpenDeals20151001.csv"
+#unprocessedSnap <- "OpenDeals20151201.csv"
 
 snap <- read.csv(unprocessedSnap, header = TRUE, as.is = TRUE)
-results <- read.csv("sample_results.csv", header = TRUE)
+results <- read.csv("results.csv", header = TRUE)
 
 str(snap)
 
